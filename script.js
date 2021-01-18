@@ -125,7 +125,7 @@ const init = () => {
 }
 const spawnEnemies = () => {
   setInterval(() => {
-    const radius = Math.random() * (70 - 10) + 10
+    const radius = Math.random() * (50 - 10) + 10
     let x
     let y
     if (Math.random() < 0.5) {
@@ -140,11 +140,11 @@ const spawnEnemies = () => {
 
     const angle = Math.atan2(canvasElement.height / 2 - y, canvasElement.width / 2 - x)
     const velocity = {
-      x: Math.cos(angle),
-      y: Math.sin(angle)
+      x: Math.cos(angle) * 50 / radius,
+      y: Math.sin(angle) * 50 / radius
     }
     enemies.push(new Enemy(x, y, radius, color, velocity))
-  }, 1500)
+  }, 1200)
 }
 
 let animationId
