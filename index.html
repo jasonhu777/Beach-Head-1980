@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: black;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+  <title>Beach Head 1980</title>
+</head>
+
+<body>
+  <div class="fixed text-white ml-2 mt-2 select-none">
+    <span>Score:</span><span id='scoreEle'>0</span>
+  </div>
+
+  <div id="modal" class="fixed inset-0 flex items-center justify-center">
+    <div class="bg-white max-w-md w-full p-6 text-center">
+      <h1 class='text-4xl bold '>0</h1>
+      <p class='text-sm text-gray-700 pb-4'>Points</p>
+      <div>
+        <button class='bg-black text-white w-full py-3 hover:bg-gray-600' id="newGameBtn">New Game</button>
+
+      </div>
+    </div>
+  </div>
+
+  <canvas></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+    integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
